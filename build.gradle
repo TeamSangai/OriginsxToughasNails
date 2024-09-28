@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version '1.7-SNAPSHOT'
 	id 'maven-publish'
+	id "com.matthewprenger.cursegradle" version "1.4.0"
 }
 
 version = project.mod_version
@@ -11,30 +12,9 @@ base {
 }
 
 repositories {
+
 	maven {
-		name = "Ladysnake Libs"
-		url = 'https://maven.ladysnake.org/releases'
-	}
-	maven {
-		url = 'https://maven.cafeteria.dev'
-		content {
-			includeGroup 'net.adriantodt.fabricmc'
-		}
-	}
-	maven {
-		url "https://maven.jamieswhiteshirt.com/libs-release"
-		content {
-			includeGroup "com.jamieswhiteshirt"
-		}
-	}
-	maven {
-		url "https://jitpack.io"
-	}
-	maven {
-		url "https://maven.shedaniel.me/"
-	}
-	maven {
-		url "https://maven.terraformersmc.com/"
+		url "https://github.com"
 	}
 
 }
@@ -51,7 +31,16 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "com.github.apace100:origins-fabric:${project.origins_version}"
+	modImplementation "apace100:origins-fabric:${project.origins_version}"
+	modImplementation "glitchfiend:GlitchCore-fabric:${glitchcore_version}"
+	modImplementation "glitchfiend:SereneSeasons-fabric:${serene_seasons_version}"
+	modImplementation "glitchfiend:ToughAsNails:${tough_as_nails_version}"
+	implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
+
+	// Dependencies embedded in final jar
+	include implementation("com.electronwill.night-config:toml:${nightconfig_version}")
+	include implementation("com.electronwill.night-config:core:${nightconfig_version}")
+	include implementation("net.jodah:typetools:0.6.3")
 }
 
 processResources {

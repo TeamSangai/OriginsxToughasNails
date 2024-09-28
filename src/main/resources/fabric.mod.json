@@ -3,13 +3,13 @@
 	"id": "origins-x-tough-as-nails",
 	"version": "${version}",
 	"name": "Origins X Tough As Nails",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A Doubly Unofficial mod that adds Compatibility between Origins and Tough As Nails",
 	"authors": [
-		"Me!"
+		"Mr.Geoves"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/TeamSangai/OriginsxToughasNails"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/origins-x-tough-as-nails/icon.png",
