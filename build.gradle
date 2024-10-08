@@ -12,11 +12,28 @@ base {
 }
 
 repositories {
-
 	maven {
-		url "https://github.com"
+		name "ladysnakeReleases"
+		url "https://maven.ladysnake.org/releases"
 	}
-
+	maven {
+		name = 'Ladysnake Mods (snapshots)'
+		url = 'https://maven.ladysnake.org/snapshots'
+	}
+	maven {
+		url = 'https://maven.minecraftforge.net/'
+	}
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
 }
 
 fabricApi {
@@ -31,15 +48,15 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "apace100:origins-fabric:${project.origins_version}"
-	modImplementation "glitchfiend:GlitchCore-fabric:${glitchcore_version}"
-	modImplementation "glitchfiend:SereneSeasons-fabric:${serene_seasons_version}"
-	modImplementation "glitchfiend:ToughAsNails:${tough_as_nails_version}"
+	implementation "io.github.apace100:origins-fabric:1.13.0-alpha.9+mc.1.21.x"
+	implementation "io.github.apace100:calio:1.14.0-alpha.7+mc.1.21.x"
+	implementation "io.github.apace100:apoli:2.12.0-alpha.12+mc.1.21.x"
+	modImplementation "maven.modrinth:s3dmwKy5:lbSHOhee"
+	modImplementation "maven.modrinth:ge1sOdFH:bfUvfR6o"
 	implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
 
 	// Dependencies embedded in final jar
-	include implementation("com.electronwill.night-config:toml:${nightconfig_version}")
-	include implementation("com.electronwill.night-config:core:${nightconfig_version}")
+
 	include implementation("net.jodah:typetools:0.6.3")
 }
 
