@@ -13,7 +13,7 @@ public class OxTanPowerTypes {
 		return configuration;
 	}
 	public static final PowerConfiguration<ModifyThirstExhaustion> MODIFY_THIRST_EXHAUSTION = register(
-			PowerConfiguration.simple(Identifier.of("origins-x-tough-as-nails", "modify_thirst_exhaustion"), (ModifyThirstExhaustion) -> new Class(ModifyThirstExhaustion))
+			PowerConfiguration.simple(Identifier.of("origins-x-tough-as-nails", "modify_thirst_exhaustion"), ModifyThirstExhaustion::new)
 	);
 	public static void register() {
 
