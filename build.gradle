@@ -12,27 +12,55 @@ base {
 }
 
 repositories {
-	maven {
-		name "ladysnakeReleases"
-		url "https://maven.ladysnake.org/releases"
-	}
-	maven {
-		name = 'Ladysnake Mods (snapshots)'
-		url = 'https://maven.ladysnake.org/snapshots'
-	}
-	maven {
-		url = 'https://maven.minecraftforge.net/'
-	}
 	exclusiveContent {
+
 		forRepository {
 			maven {
 				name = "Modrinth"
 				url = "https://api.modrinth.com/maven"
 			}
 		}
+
 		filter {
 			includeGroup "maven.modrinth"
 		}
+
+	}
+	maven {
+		name = "QuiltMC"
+		url = "https://maven.quiltmc.org/repository/release"
+	}
+	maven {
+		name = 'Ladysnake Mods'
+		url = 'https://maven.ladysnake.org/releases'
+	}
+	maven {
+		name = 'Ladysnake Mods (snapshots)'
+		url = 'https://maven.ladysnake.org/snapshots'
+	}
+	maven {
+		url = 'https://maven.cafeteria.dev'
+		content {
+			includeGroup 'net.adriantodt.fabricmc'
+		}
+	}
+	maven {
+		url "https://maven.jamieswhiteshirt.com/libs-release"
+		content {
+			includeGroup "com.jamieswhiteshirt"
+		}
+	}
+	maven {
+		url "https://masa.dy.fi/maven"
+	}
+	maven {
+		url "https://jitpack.io"
+	}
+	maven {
+		url "https://maven.shedaniel.me/"
+	}
+	maven {
+		url "https://maven.terraformersmc.com/"
 	}
 }
 
@@ -48,11 +76,17 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	implementation "io.github.apace100:origins-fabric:1.13.0-alpha.9+mc.1.21.x"
-	implementation "io.github.apace100:calio:1.14.0-alpha.7+mc.1.21.x"
-	implementation "io.github.apace100:apoli:2.12.0-alpha.12+mc.1.21.x"
+	implementation "io.github.apace100:origins-fabric:1.13.0-alpha.11+mc.1.21.1"
+	implementation "io.github.apace100:calio:1.14.0-alpha.8+mc.1.21.x"
+	implementation "io.github.apace100:apoli:2.12.0-alpha.14+mc.1.21.1"
 	modImplementation "maven.modrinth:s3dmwKy5:lbSHOhee"
 	modImplementation "maven.modrinth:ge1sOdFH:bfUvfR6o"
+	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig_version}") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
+
+	modCompileOnlyApi "carpet:fabric-carpet:${project.carpet_version}"
+	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 	implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
 
 	// Dependencies embedded in final jar
