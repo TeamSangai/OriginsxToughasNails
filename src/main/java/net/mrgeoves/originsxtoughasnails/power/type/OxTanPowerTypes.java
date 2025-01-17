@@ -1,8 +1,14 @@
 package net.mrgeoves.originsxtoughasnails.power.type;
 
+import io.github.apace100.apoli.power.PowerConfiguration;
+import io.github.apace100.apoli.power.type.PowerType;
+import io.github.apace100.apoli.registry.ApoliRegistries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
+
 public class OxTanPowerTypes {
 	public static <T extends PowerType> PowerConfiguration<T> register(PowerConfiguration<T> configuration) {
-		PowerConfiguration<PowerType> casted = (PowerConfiguration<PowerType>) configuration;
+		@SuppressWarnings("unchecked") PowerConfiguration<PowerType> casted = (PowerConfiguration<PowerType>) configuration;
 		Registry.register(ApoliRegistries.POWER_TYPE, casted.id(), casted);
 		return configuration;
 	}
