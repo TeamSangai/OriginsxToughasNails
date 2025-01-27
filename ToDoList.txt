@@ -1,0 +1,25 @@
+Thirst related features:
+    ModifyThirstExhaustion power type.
+        more thirst/less thirst powers.
+    ChangeLiquidDiet power type.
+        lava liquid diet
+            hud assets.
+            Blazeborn power
+            lava filled ore canteens and bottles.
+        arcane liquid diet
+            hud assets.
+            Enderian power
+    Thirst_Exhaust entity action.
+    Hydrate entity action.
+    thirst_level entity condition.
+    satiation_level entity condition type.
+
+Temperature related features:
+    ModifyTemperatureProneness Power type.
+        Heat Prone/Cold Prone powers for most of the base origins (when it fits).
+    ModifySafeTemperatures Power type.
+        Modify Nether Inhabitant to be a multiple power type, now also makes cool temperatures unsafe while being hot is safe.
+        Snow-scape Inhabitant power for blizzborn (reverse of nether inhabitant's temperature gimmick.)
+    apply_temperature_shift entity action.
+    current_temperature entity condition.
+        A power for the Enderians that lakes them mostly ignore icy/hot temperatures, giving negative stacking status effects when in said extreme temperatures.

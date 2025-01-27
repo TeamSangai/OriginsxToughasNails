@@ -1,0 +1,6 @@
+{
+  "name": "Frost Immunity",
+  "description": "you are immune to any frost effects.",
+  "type": "modify_type_tag",
+  "tag": "minecraft:freeze_immune_entity_types"
+}
