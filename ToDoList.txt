@@ -22,4 +22,4 @@ Temperature related features:
         Snow-scape Inhabitant power for blizzborn (reverse of nether inhabitant's temperature gimmick.)
     apply_temperature_shift entity action.
     current_temperature entity condition.
-        A power for the Enderians that lakes them mostly ignore icy/hot temperatures, giving negative stacking status effects when in said extreme temperatures.
+        A power for the Enderians that lets them mostly ignore icy/hot temperatures, giving negative stacking status effects when in said extreme temperatures.
