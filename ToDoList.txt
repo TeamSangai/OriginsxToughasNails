@@ -12,7 +12,7 @@ Thirst related features:
     Thirst_Exhaust entity action.
     Hydrate entity action.
     thirst_level entity condition.
-    satiation_level entity condition type.
+    hydration_level entity condition type.
 
 Temperature related features:
     ModifyTemperatureProneness Power type.
