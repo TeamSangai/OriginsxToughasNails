@@ -1,7 +1,9 @@
 {
+  "name": "Higher thirst",
+  "description": "You become thirsty faster",
   "type": "origins:modify_exhaustion",
   "modifier": {
-  "id": "originsxtan:higherthirst",
+  "id": "originsxtan:higher-thirst",
   "operation": "multiply_base_additive",
   "amount": 0.6
   }

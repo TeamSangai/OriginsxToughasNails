@@ -18,7 +18,7 @@ Temperature related features:
     ModifyTemperatureProneness Power type.
         Heat Prone/Cold Prone powers for most of the base origins (when it fits).
     ModifySafeTemperatures Power type.
-        Modify Nether Inhabitant to be a multiple power type, now also makes cool temperatures unsafe while being hot is safe.
+        make a Modified Nether Inhabitant (called Nether Inhabitant+) thats a multiple power type, which in addition to making you spawn in the nether, also makes cool temperatures unsafe while being hot is safe.
         Snow-scape Inhabitant power for blizzborn (reverse of nether inhabitant's temperature gimmick.)
     apply_temperature_shift entity action.
     current_temperature entity condition.
