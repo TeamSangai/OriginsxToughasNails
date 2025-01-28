@@ -1,5 +1,5 @@
 Thirst related features:
-    ModifyThirstExhaustion power type.
+    Done - ModifyThirstExhaustion power type. - Done
         more thirst/less thirst powers.
     ChangeLiquidDiet power type.
         lava liquid diet

@@ -2,6 +2,7 @@ package net.mrgeoves.originsxtoughasnails.power.type;
 
 import io.github.apace100.apoli.power.PowerConfiguration;
 import io.github.apace100.apoli.power.type.PowerType;
+import io.github.apace100.apoli.power.type.ValueModifyingPowerType;
 import io.github.apace100.apoli.registry.ApoliRegistries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -12,8 +13,8 @@ public class OxTanPowerTypes {
 		Registry.register(ApoliRegistries.POWER_TYPE, casted.id(), casted);
 		return configuration;
 	}
-	public static final PowerConfiguration<ModifyThirstExhaustion> MODIFY_THIRST_EXHAUSTION = register(
-			PowerConfiguration.simple(Identifier.of("origins-x-tough-as-nails", "modify_thirst_exhaustion"), ModifyThirstExhaustion::new)
+	public static final PowerConfiguration<ModifyThirstExhaustionPowerType> MODIFY_THIRST_EXHAUSTION = register(
+            register(ValueModifyingPowerType.createModifyingConfiguration(Identifier.of("modify_thirst_exhaustion"), ModifyThirstExhaustionPowerType::new))
 	);
 	public static void register() {
 
