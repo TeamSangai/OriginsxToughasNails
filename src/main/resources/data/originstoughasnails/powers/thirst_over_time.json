@@ -1,0 +1,14 @@
+{
+  "name": "Ghastly Defluidization",
+  "description": "you loose thirst over time when phantomized",
+  "type": "origins:action_over_time",
+  "entity_action": {
+    "type": "originstoughsasnails:thirst_exhaust",
+    "amount": 0.812
+  },
+  "interval": 20,
+  "condition": {
+    "type": "origins:power_active",
+    "power": "*:phantomize"
+  }
+}

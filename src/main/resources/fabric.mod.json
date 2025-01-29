@@ -1,29 +1,29 @@
 {
 	"schemaVersion": 1,
-	"id": "origins-x-tough-as-nails",
+	"id": "origins-tough-as-nails",
 	"version": "${version}",
-	"name": "Origins X Tough As Nails",
+	"name": "Origins And Tough As Nails Compatibility mod",
 	"description": "A Doubly Unofficial mod that adds Compatibility between Origins and Tough As Nails",
 	"authors": [
 		"Mr.Geoves"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/TeamSangai/OriginsxToughasNails"
+		"sources": "https://github.com/TeamSangai/OriginsToughasNails"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/origins-x-tough-as-nails/icon.png",
+	"icon": "assets/origins-tough-as-nails/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.mrgeoves.originsxtoughasnails.OriginsXToughAsNails"
+			"net.mrgeoves.originstoughasnails.OriginsToughAsNails"
 		],
 		"fabric-datagen": [
-			"net.mrgeoves.originsxtoughasnails.OriginsXToughAsNailsDataGenerator"
+			"net.mrgeoves.originstoughasnails.OriginsToughAsNailsDataGenerator"
 		]
 	},
 	"mixins": [
-		"origins-x-tough-as-nails.mixins.json"
+		"origins-tough-as-nails.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.5",

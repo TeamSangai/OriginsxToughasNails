@@ -1,13 +1,13 @@
-package net.mrgeoves.originsxtoughasnails;
+package net.mrgeoves.originstoughasnails;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.mrgeoves.originsxtoughasnails.power.type.OxTanPowerTypes;
+import net.mrgeoves.originstoughasnails.power.type.ToughAsNailsPowerTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class OriginsXToughAsNails implements ModInitializer {
-	public static final String MOD_ID = "origins-x-tough-as-nails";
+public class OriginsToughAsNails implements ModInitializer {
+	public static final String MOD_ID = "origins_toughasnails";
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
@@ -15,7 +15,7 @@ public class OriginsXToughAsNails implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	public void onInitialize() {
-		OxTanPowerTypes.register();
+		ToughAsNailsPowerTypes.register();
 	}
 
 }

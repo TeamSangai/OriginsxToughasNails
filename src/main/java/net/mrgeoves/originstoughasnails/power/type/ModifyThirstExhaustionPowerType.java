@@ -1,4 +1,4 @@
-package net.mrgeoves.originsxtoughasnails.power.type;
+package net.mrgeoves.originstoughasnails.power.type;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import io.github.apace100.apoli.component.PowerHolderComponent;
@@ -18,20 +18,11 @@ import java.util.Optional;
 public class ModifyThirstExhaustionPowerType extends ValueModifyingPowerType {
 	public ModifyThirstExhaustionPowerType(List<Modifier> modifiers, Optional<EntityCondition> condition) {
 		super(modifiers, condition);
-		@Mixin(ThirstHandler.class)
-        class ThirstHandlerMixin {
-			@ModifyExpressionValue(
-					method = "onPlayerTick",
-					at = @At(value = "FIELD", target = "Ltoughasnails/config/ThirstConfig;thirstExhaustionThreshold:D")
-			)
-			private static double modifyExhaustionThreshold(double original, PlayerEntity player) {
-				return PowerHolderComponent.modify(player, ModifyThirstExhaustionPowerType.class, original);
-			}
-		}
 	}
 
-	@Override
+
+    @Override
 	public @NotNull PowerConfiguration<?> getConfig() {
-		return OxTanPowerTypes.MODIFY_THIRST_EXHAUSTION;
+		return ToughAsNailsPowerTypes.MODIFY_THIRST_EXHAUSTION;
 	}
 }

@@ -1,4 +1,4 @@
-package net.mrgeoves.originsxtoughasnails.mixin;
+package net.mrgeoves.originstoughasnails.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;
