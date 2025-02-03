@@ -18,7 +18,7 @@ public class OriginsToughAsNails implements ModInitializer {
 
 	public void onInitialize() {
 		ToughAsNailsEntityActionTypes.register();
-		PowerTypes.register();
+		ToughAsNailsPowerTypes.register();
 	}
 
 }
