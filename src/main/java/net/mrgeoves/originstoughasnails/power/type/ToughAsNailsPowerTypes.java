@@ -15,7 +15,7 @@ public class ToughAsNailsPowerTypes {
 		return configuration;
 	}
 	public static final PowerConfiguration<ModifyThirstExhaustionPowerType> MODIFY_THIRST_EXHAUSTION = PowerTypes.register(
-			ValueModifyingPowerType.createModifyingConfiguration(Identifier.of("origins_toughsasnails","modify_thirst_exhaustion"), ModifyThirstExhaustionPowerType::new)
+			ValueModifyingPowerType.createModifyingConfiguration(Identifier.of("originstoughsasnails","modify_thirst_exhaustion"), ModifyThirstExhaustionPowerType::new)
 	);
 
 	public static void register() {

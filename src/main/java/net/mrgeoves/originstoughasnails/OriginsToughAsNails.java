@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class OriginsToughAsNails implements ModInitializer {
-	public static final String MOD_ID = "origins_toughasnails";
+	public static final String MOD_ID = "originstoughasnails";
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.

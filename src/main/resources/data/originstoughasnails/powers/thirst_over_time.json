@@ -3,7 +3,7 @@
   "description": "you loose thirst over time when phantomized",
   "type": "origins:action_over_time",
   "entity_action": {
-    "type": "origins_toughsasnails:thirst_exhaust",
+    "type": "originstoughsasnails:thirst_exhaust",
     "amount": 0.812
   },
   "interval": 20,
