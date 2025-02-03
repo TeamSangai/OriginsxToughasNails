@@ -2,6 +2,7 @@ package net.mrgeoves.originstoughasnails.power.type;
 
 import io.github.apace100.apoli.power.PowerConfiguration;
 import io.github.apace100.apoli.power.type.PowerType;
+import io.github.apace100.apoli.power.type.PowerTypes;
 import io.github.apace100.apoli.power.type.ValueModifyingPowerType;
 import io.github.apace100.apoli.registry.ApoliRegistries;
 import net.minecraft.registry.Registry;
@@ -13,10 +14,10 @@ public class ToughAsNailsPowerTypes {
 		Registry.register(ApoliRegistries.POWER_TYPE, casted.id(), casted);
 		return configuration;
 	}
-	public static final PowerConfiguration<ModifyThirstExhaustionPowerType> MODIFY_THIRST_EXHAUSTION = register(
-            register(ValueModifyingPowerType.createModifyingConfiguration(Identifier.of("originstoughsasnails","modify_thirst_exhaustion"), ModifyThirstExhaustionPowerType::new))
+	public static final PowerConfiguration<ModifyThirstExhaustionPowerType> MODIFY_THIRST_EXHAUSTION = PowerTypes.register(
+			ValueModifyingPowerType.createModifyingConfiguration(Identifier.of("origins_toughsasnails","modify_thirst_exhaustion"), ModifyThirstExhaustionPowerType::new)
 	);
-	public static void register() {
 
+	public static void register() {
 	}
 }

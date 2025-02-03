@@ -1,7 +1,7 @@
 {
   "name": "Higher thirst",
   "description": "You become thirsty faster",
-  "type": "originstoughasnails:modify_thirst_exhaustion",
+  "type": "origins_toughasnails:modify_thirst_exhaustion",
   "modifier": {
   "id": "originstan:higher-thirst",
   "operation": "multiply_base_additive",

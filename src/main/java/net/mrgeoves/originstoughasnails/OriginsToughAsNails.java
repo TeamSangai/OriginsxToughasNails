@@ -1,7 +1,9 @@
 package net.mrgeoves.originstoughasnails;
 
+import io.github.apace100.apoli.power.type.PowerTypes;
 import net.fabricmc.api.ModInitializer;
 
+import net.mrgeoves.originstoughasnails.action.type.ToughAsNailsEntityActionTypes;
 import net.mrgeoves.originstoughasnails.power.type.ToughAsNailsPowerTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +17,8 @@ public class OriginsToughAsNails implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	public void onInitialize() {
-		ToughAsNailsPowerTypes.register();
+		ToughAsNailsEntityActionTypes.register();
+		PowerTypes.register();
 	}
 
 }
