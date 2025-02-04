@@ -9,8 +9,9 @@ Thirst related features:
         arcane liquid diet
             hud assets.
             Enderian power
-    Thirst_Exhaust entity action.
-    Hydrate entity action.
+    Drinkable Item power type.
+    Done - Thirst_Exhaust entity action. - Done
+    Done - Hydrate entity action. - Done
     thirst_level entity condition.
     hydration_level entity condition type.
 

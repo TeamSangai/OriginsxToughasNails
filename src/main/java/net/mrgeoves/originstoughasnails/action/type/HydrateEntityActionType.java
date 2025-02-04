@@ -12,43 +12,42 @@ import org.jetbrains.annotations.NotNull;
 import toughasnails.api.thirst.IThirst;
 import toughasnails.api.thirst.ThirstHelper;
 
-public class ThirstExhaustEntityActionType extends EntityActionType {
-
-    public static final TypedDataObjectFactory<ThirstExhaustEntityActionType> DATA_FACTORY = TypedDataObjectFactory.simple(
+public class HydrateEntityActionType extends EntityActionType {
+    public static final TypedDataObjectFactory<HydrateEntityActionType> DATA_FACTORY = TypedDataObjectFactory.simple(
             new SerializableData()
-                    .add("amount", SerializableDataTypes.FLOAT),
-            data -> new ThirstExhaustEntityActionType(
-                    data.get("amount")
+                    .add("hydration", SerializableDataTypes.FLOAT)
+                    .add("thirst", SerializableDataTypes.INT),
+            data -> new HydrateEntityActionType(
+                    data.get("hydration"),
+                    data.get("thirst")
             ),
             (actionType, serializableData) -> serializableData.instance()
-                    .set("amount", actionType.amount)
+                    .set("hydration", actionType.hydration)
+                    .set("thirst", actionType.thirstint)
     );
 
-    private final float amount;
+    private final float hydration;
+    private final int thirstint;
 
-    public ThirstExhaustEntityActionType(float amount) {
-        this.amount = amount;
+    public HydrateEntityActionType(float hydration, int thirstint) {
+        this.hydration = hydration;
+        this.thirstint = thirstint;
     }
-
-    @Override
     public void accept(EntityActionContext context) {
 
         if (context.entity() instanceof PlayerEntity player) {
             IThirst thirst = ThirstHelper.getThirst(player);
-            thirst.addExhaustion(amount);
+            thirst.addHydration(hydration);
+            thirst.addThirst(thirstint);
         }
 
     }
-
     @Override
     protected void execute(Entity entity) {
 
     }
-
     @Override
     public @NotNull ActionConfiguration<?> getConfig() {
-        return ToughAsNailsEntityActionTypes.THIRST_EXHAUST;
+        return ToughAsNailsEntityActionTypes.HYDRATE;
     }
-
-
 }
